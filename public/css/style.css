@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#181818), to(rgba(24, 24, 24, 0.4))), url("/assets/bg_png.png") no-repeat center center/cover;
+  background: linear-gradient(90deg, #181818, rgba(24, 24, 24, 0.4)), url("/assets/bg_png.png") no-repeat center center/cover;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 30px 30px 0 30px;
+}
+
+nav li:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 75px;
+}
+
+nav ul a {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+nav .yellow-bull {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #E7C650;
+  border-radius: 50px;
+}
+
+nav h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+section.form {
+  position: absolute;
+  top: 50%;
+  left: 75px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+}
+
+section.form h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+}
+
+section.form h1 span {
+  color: #E7C650;
+}
+
+section.form p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+section.form p a {
+  color: #E7C650;
+  text-decoration: none;
+}
+
+section.form form {
+  width: 575px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+}
+
+section.form form .col-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+section.form form .col-2 input {
+  width: 275px;
+}
+
+section.form form .input {
+  position: relative;
+}
+
+section.form form .input::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+section.form form .input img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+section.form form .input img #toggle-password {
+  cursor: pointer;
+}
+
+section.form form input {
+  border: none;
+  outline: none;
+  height: 65px;
+  width: 575px;
+  border-radius: 20px;
+  background: rgba(143, 143, 143, 0.2);
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 20px 20px 10px;
+}
+
+section.form form button {
+  cursor: pointer;
+  background: #E7C650;
+  height: 65px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+section.form small {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+section.form small a {
+  color: #E7C650;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */

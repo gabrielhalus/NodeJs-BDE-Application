@@ -1,0 +1,47 @@
+<%- include('header') -%>
+
+<section id="login">
+    <nav>
+        <ul>
+            <li>
+                <span class="yellow-bull"></span>
+                <h2>0x0BDE</h2>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/log-in">Log In</a></li>
+        </ul>
+    </nav>
+
+    <section class="form">
+        <h1>Create new account<span>.</span></h1>
+        <p class="redirection">Already a member ? <a href="/log-in">Log In</a></p>
+
+        <form action="" method="post" autocomplete="off">
+            <div class="col-2">
+                <div class="input" data-placeholder="first-name">
+                    <input type="text" id="first-name">
+                    <img src="/assets/user.svg" alt="input icon">
+                </div>
+                <div class="input" data-placeholder="last-name">
+                    <input type="text" id="last-name">
+                    <img src="/assets/user.svg" alt="input icon">
+                </div>
+            </div>
+            <div class="input" data-placeholder="email">
+                <input type="email" id="email">
+                <img src="/assets/mail.svg" alt="input icon">
+            </div>
+            <div class="input" data-placeholder="password">
+                <input type="password" id="password">
+                <img src="/assets/visibile.svg" alt="input icon" id="toggle-password">
+            </div>
+            <button type="submit">Create account</button>
+        </form>
+
+        <small>By signing up you agree to the <a href="#!">Terms & Conditions</a></small>
+    </section>
+</section>
+
+<script src="/static/javascript/main.js"></script>
+
+<%- include('footer') -%>

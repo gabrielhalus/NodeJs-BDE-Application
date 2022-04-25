@@ -1,0 +1,35 @@
+<%- include('header') -%>
+
+<section id="login">
+    <nav>
+        <ul>
+            <li>
+                <span class="yellow-bull"></span>
+                <h2>0x0BDE</h2>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <section class="form">
+        <h1>Log in to your account<span>.</span></h1>
+        <p class="redirection">Not yet a member ? <a href="/sign-up">Sign Up</a></p>
+
+        <form action="" method="post" autocomplete="off">
+            <div class="input" data-placeholder="email">
+                <input type="email" id="email">
+                <img src="/assets/mail.svg" alt="input icon">
+            </div>
+            <div class="input" data-placeholder="password">
+                <input type="password" id="password">
+                <img src="/assets/visibile.svg" alt="input icon" id="toggle-password">
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+    </section>
+</section>
+
+<script src="/static/javascript/main.js"></script>
+
+<%- include('footer') -%>
