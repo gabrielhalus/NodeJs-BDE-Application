@@ -1,0 +1,49 @@
+<%- include('header') -%>
+
+<header>
+    <ul>
+        <li>
+            <span class="bull"></span>
+        </li>
+        <li>
+            <a href="/" id="title">0x0BDE</a>
+        </li>
+    </ul>
+</header>
+
+<div class="container">
+    <ul>
+        <li>
+            <h1>Create a new account<span>.</span></h1>
+            <p>Already a member ? <a href="/login">Log In</a></p>
+        </li>
+        <li>
+            <form id="signup" action="http://localhost:3000/route/signup" method="post" autocomplete="off">
+                <div class="input-field" id="first-name">
+                    <input type="text" name="firstName" placeholder="John">
+                    <img src="/assets/user.svg">
+                </div>
+
+                <div class="input-field" id="last-name">
+                    <input type="text" name="lastName" placeholder="Doe">
+                    <img src="/assets/user.svg">
+                </div>
+
+                <div class="input-field" id="email">
+                    <input type="email" name="email" placeholder="john.doe@company.com">
+                    <img src="/assets/mail.svg">
+                </div>
+                
+                <div class="input-field" id="password">
+                    <input type="password" name="password" id="password-input" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                    <img src="/assets/visibile.svg" id="toggle-password">
+                </div>
+                
+                <button type="submit" id="submit">Create account</button> 
+            </form>
+            <small>By signing up you agree to the <a href="#!">Terms & Conditions</a></small>
+        </li>
+    </ul>
+</div>
+
+<%- include('footer') -%>

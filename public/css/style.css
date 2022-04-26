@@ -3,24 +3,21 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: -webkit-gradient(linear, left top, right top, from(#181818), to(rgba(24, 24, 24, 0.4))), url("/assets/bg_png.png") no-repeat center center/cover;
-  background: linear-gradient(90deg, #181818, rgba(24, 24, 24, 0.4)), url("/assets/bg_png.png") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, right top, from(#181818), to(rgba(24, 24, 24, 0.4))), url(/assets/bg_png.png);
+  background: linear-gradient(90deg, #181818, rgba(24, 24, 24, 0.4)), url(/assets/bg_png.png);
 }
 
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 30px 30px 0 30px;
-}
-
-nav li:first-child {
+header ul {
+  padding: 30px;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,161 +27,236 @@ nav li:first-child {
   gap: 15px;
 }
 
-nav ul {
+header ul span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #E7C650;
+}
+
+header ul #title {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 5%;
+  width: 30%;
+  max-width: 30%;
+}
+
+.container ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 75px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
 }
 
-nav ul a {
-  font-size: 20px;
+.container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.container ul li h1 {
+  color: #fff;
+  font-size: 3.5em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.container ul li h1 span {
+  color: #E7C650;
+}
+
+.container ul li p {
+  font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.container ul li p a {
   text-decoration: none;
-}
-
-nav .yellow-bull {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background: #E7C650;
-  border-radius: 50px;
-}
-
-nav h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
-}
-
-section.form {
-  position: absolute;
-  top: 50%;
-  left: 75px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 35px;
-}
-
-section.form h1 {
-  font-size: 64px;
-  font-weight: 700;
-  color: white;
-}
-
-section.form h1 span {
   color: #E7C650;
+  font-weight: 500;
 }
 
-section.form p {
+.container ul li form {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
+  row-gap: 35px;
+}
+
+.container ul li form#signup {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.container ul li form#signup #first-name {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+}
+
+.container ul li form#signup #last-name {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+}
+
+.container ul li form#signup #email {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2/1/3/3;
+}
+
+.container ul li form#signup #password {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3/1/4/3;
+}
+
+.container ul li form#signup #submit {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 4/1/5/3;
+}
+
+.container ul li form#login {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.container ul li form#login #email {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
+}
+
+.container ul li form#login #password {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2/1/3/3;
+}
+
+.container ul li form#login #submit {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3/1/4/3;
+}
+
+.container ul li form .input-field {
+  height: 65px;
+  background: rgba(143, 143, 143, 0.2);
+  border-radius: 20px;
+  position: relative;
+  cursor: text;
+}
+
+.container ul li form .input-field input {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: calc(100% - 20px - 54px);
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.5);
+  background: none;
+  border: none;
+  outline: none;
 }
 
-section.form p a {
-  color: #E7C650;
-  text-decoration: none;
-}
-
-section.form form {
-  width: 575px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 35px;
-}
-
-section.form form .col-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 25px;
-}
-
-section.form form .col-2 input {
-  width: 275px;
-}
-
-section.form form .input {
-  position: relative;
-}
-
-section.form form .input::after {
-  content: attr(data-placeholder);
-  position: absolute;
-  top: 5px;
-  left: 20px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-section.form form .input img {
+.container ul li form .input-field img {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 15px;
   -webkit-filter: invert(1);
           filter: invert(1);
 }
 
-section.form form .input img #toggle-password {
-  cursor: pointer;
+.container ul li form .input-field::after {
+  content: attr(id);
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 
-section.form form input {
+.container ul li form .input-field:focus-within {
+  outline: 2px solid #E7C650;
+}
+
+.container ul li form .input-field:focus-within::after {
+  color: #E7C650;
+}
+
+.container ul li form button {
+  height: 65px;
   border: none;
   outline: none;
-  height: 65px;
-  width: 575px;
-  border-radius: 20px;
-  background: rgba(143, 143, 143, 0.2);
-  font-size: 20px;
-  font-weight: 500;
-  color: white;
-  padding: 20px 20px 10px;
-}
-
-section.form form button {
-  cursor: pointer;
   background: #E7C650;
-  height: 65px;
-  border: none;
-  outline: none;
   border-radius: 20px;
-  font-size: 20px;
-  font-weight: 600;
-  color: white;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
 }
 
-section.form small {
+.container ul li form button:hover {
+  background: rgba(231, 198, 80, 0.8);
+}
+
+.container ul li small {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-size: 12px;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
 
-section.form small a {
+.container ul li small a {
   color: #E7C650;
-  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

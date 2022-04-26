@@ -1,0 +1,31 @@
+<%- include('header') -%>
+
+    <style>
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: lime;
+        }
+        a {
+            color: aliceblue;
+            margin: 25px;
+        }
+        div {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <% if(locals.isLogged) { %>
+        <h1>Login Successfully!</h1>
+    <% } %> 
+
+    <div>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+    </div>
+
+<%- include('footer') -%>

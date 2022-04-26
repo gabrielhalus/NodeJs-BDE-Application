@@ -7,7 +7,7 @@ const {v4: uuidv4} = require('uuid')
 
 const router = require('./router')
 
-mongoose.connect('mongodb://127.0.0.1:27017/0x0BDE', {
+mongoose.connect('mongodb://127.0.0.1:27017/bde-users', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -42,12 +42,16 @@ app.use(session({
 }))
 
 // home route
-app.get('/sign-up', (req,res) => {
-    res.render('sign-up', {title: "0x0BDE - Sign Up"})
+app.get('/', (req,res) => {
+    res.render('index', {title: "0x0BDE - Home"})
 })
 
-app.get('/log-in', (req,res) => {
-    res.render('log-in', {title: "0x0BDE - Log In"})
+app.get('/signup', (req,res) => {
+    res.render('signup', {title: "0x0BDE - Sign Up"})
+})
+
+app.get('/login', (req,res) => {
+    res.render('login', {title: "0x0BDE - Log In"})
 })
 
 app.listen(PORT, () => {

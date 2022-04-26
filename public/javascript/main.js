@@ -1,5 +1,5 @@
 const togglePassword = document.getElementById('toggle-password')
-const password = document.getElementById('password')
+const password = document.getElementById('password-input')
 
 togglePassword.addEventListener('click', function() {
     // toggle the type attribute

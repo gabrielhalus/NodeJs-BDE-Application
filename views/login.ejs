@@ -1,0 +1,38 @@
+<%- include('header') -%>
+
+<header>
+    <ul>
+        <li>
+            <span class="bull"></span>
+        </li>
+        <li>
+            <a href="/" id="title">0x0BDE</a>
+        </li>
+    </ul>
+</header>
+
+<div class="container">
+    <ul>
+        <li>
+            <h1>Log in to your account<span>.</span></h1>
+            <p>Not yet a member ? <a href="/signup">Sign Up</a></p>
+        </li>
+        <li>
+            <form id="login" action="http://localhost:3000/route/login" method="post" autocomplete="off">
+                <div class="input-field" id="email">
+                    <input type="email" name="email" placeholder="john.doe@company.com">
+                    <img src="/assets/mail.svg">
+                </div>
+                
+                <div class="input-field" id="password">
+                    <input type="password" name="password" id="password-input" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                    <img src="/assets/visibile.svg" id="toggle-password">
+                </div>
+                
+                <button type="submit" id="submit">Log In</button> 
+            </form>
+        </li>
+    </ul>
+</div>
+
+<%- include('footer') -%>
